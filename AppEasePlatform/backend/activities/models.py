@@ -8,3 +8,13 @@ class Homepage(models.Model):
 
     def __str__(self):
         return self.homepage_title
+
+class Child(models.Model):
+    name = models.CharField(max_length=250)
+    dob = models.DateField()
+    parent_guardian_name = models.CharField(max_length=250)
+    height = models.IntegerField()
+    weight = models.IntegerField()
+
+    def __str__(self):
+        return self.name
