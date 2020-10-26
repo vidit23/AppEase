@@ -1,15 +1,15 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from rest_framework import generics, permissions
 from rest_framework.response import Response
 from knox.models import AuthToken
-from .serializers import UserSerializer, RegisterSerializer
+from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIView
+from .serializers import UserSerializer, RegisterSerializer, ChildSerializer, ChangePasswordSerializer
 from django.contrib.auth import login
-from rest_framework import permissions
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from knox.views import LoginView as KnoxLoginView
-from .serializers import ChangePasswordSerializer
 from rest_framework.permissions import IsAuthenticated  
 from django.contrib.auth.models import User
+from . models import Child
 
 # Register API
 class RegisterAPI(generics.GenericAPIView):
@@ -68,3 +68,17 @@ class ChangePasswordView(generics.UpdateAPIView):
             return Response(response)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ChildListView(ListAPIView):
+    queryset = Child.objects.all()
+    serializer_class = ChildSerializer
+
+class ChildDetailView(RetrieveAPIView):
+    queryset = Child.objects.all()
+    serializer_class = ChildSerializer
+
+
+class ChildCreateView(ListCreateAPIView):
+    serializer_class = ChildSerializer
+    queryset = Child.objects.all()

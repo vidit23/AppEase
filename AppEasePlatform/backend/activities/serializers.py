@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
+from .models import Child
 
 # User Serializer
 class UserSerializer(serializers.ModelSerializer):
@@ -27,3 +28,10 @@ class ChangePasswordSerializer(serializers.Serializer):
     """
     old_password = serializers.CharField(required=True)
     new_password = serializers.CharField(required=True)
+
+
+class ChildSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Child
+        fields ='__all__'
+    
