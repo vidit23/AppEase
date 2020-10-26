@@ -2,7 +2,7 @@
 from rest_framework import generics, permissions
 from rest_framework.response import Response
 from knox.models import AuthToken
-from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView, ListCreateAPIView, UpdateAPIView
 from .serializers import UserSerializer, RegisterSerializer, ChildSerializer, ChangePasswordSerializer
 from django.contrib.auth import login
 from rest_framework.authtoken.serializers import AuthTokenSerializer
@@ -80,5 +80,9 @@ class ChildDetailView(RetrieveAPIView):
 
 
 class ChildCreateView(ListCreateAPIView):
+    serializer_class = ChildSerializer
+    queryset = Child.objects.all()
+
+class ChildUpdateView(UpdateAPIView):
     serializer_class = ChildSerializer
     queryset = Child.objects.all()
