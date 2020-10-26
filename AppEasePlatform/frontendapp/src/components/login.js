@@ -5,10 +5,10 @@ class Login extends Component {
         credentials: {
             username: '',
             password: ''
-        }
+        },
+        register: false
     }
     login = event => {
-        console.log(this.state.credentials);
         fetch('http://127.0.0.1:8000/api/login/', {
             method: 'POST',
             headers: {
@@ -21,6 +21,24 @@ class Login extends Component {
             }
         ).catch(error => console.error(error))
     }
+    register = event => {
+        fetch('http://127.0.0.1:8000/api/register/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(this.state.credentials)
+        }).then(
+            data => {
+                console.log(data);
+            }
+        ).catch(error => console.error(error))
+    }
+    registerstate = event => {
+        this.setState(prevState => 
+            ({ register: !prevState.register })
+        )
+    }
     inputChanged = event => {
         const credentials = this.state.credentials;
         credentials[event.target.name] = event.target.value;
@@ -30,6 +48,13 @@ class Login extends Component {
         return ( 
             <div className = "App" >
                 <h1> Login User </h1> 
+                {this.state.register && <label> Email:
+                    <input type = 'email'
+                        name = 'email'
+                        value = { this.state.credentials.email }
+                        onChange = { this.inputChanged }
+                    /> 
+                </label>}
                 <label > Username:
                     <input type = 'text'
                         name = 'username'
@@ -46,8 +71,9 @@ class Login extends Component {
                     /> 
                 </label>
                 <br/>
-                <button onClick = { this.login } > Login </button> 
-                <a>Register Now</a>
+                {!this.state.register && <button onClick = { this.login } > Login </button> }
+                <a onClick = { this.registerstate } > Not a member? Click to register </a> 
+                {this.state.register && <button onClick = { this.register } > Register </button> }
             </div>
         );
     }
