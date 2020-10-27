@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Redirect } from "react-router-dom";
+import { setUserSession } from '../utils/common';
 
 class Login extends Component {
     state = {
@@ -6,7 +8,8 @@ class Login extends Component {
             username: '',
             password: ''
         },
-        register: false
+        register: false,
+        redirect: false
     }
     login = event => {
         fetch('http://127.0.0.1:8000/api/login/', {
@@ -15,9 +18,15 @@ class Login extends Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(this.state.credentials)
-        }).then(
+        })
+        .then(response => response.json())
+        .then(
             data => {
                 console.log(data);
+                setUserSession(data.token, this.state.credentials.username);
+                this.setState({
+                    redirect: true
+                })
             }
         ).catch(error => console.error(error))
     }
@@ -28,9 +37,15 @@ class Login extends Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(this.state.credentials)
-        }).then(
+        })
+        .then(response => response.json())
+        .then(
             data => {
                 console.log(data);
+                // setUserSession(data.token, data.user.username);
+                this.setState({
+                    redirect: true
+                })
             }
         ).catch(error => console.error(error))
     }
@@ -41,10 +56,14 @@ class Login extends Component {
     }
     inputChanged = event => {
         const credentials = this.state.credentials;
+        console.log(credentials)
         credentials[event.target.name] = event.target.value;
         this.setState({ credentials: credentials })
     }
     render() {
+        if (this.state.redirect) {
+            return <Redirect to='/dashboard' />
+        }
         return ( 
             <div className = "App" >
                 <h1> Login User </h1> 
