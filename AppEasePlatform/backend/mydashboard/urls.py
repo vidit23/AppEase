@@ -17,14 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from activities import views
 
+
 app_name = 'main'
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
-    path('',include('activities.urls'))
-    # path("", views.homepage, name="homepage"),
-    # path("register/", views.register, name="register"),
-    # path("logout", views.logout_request, name="logout"),
-    # path("login", views.logout_request, name="login"),
+    path('',include('activities.urls')),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path('authentication/', include('activities.urls')),
 ]
