@@ -1,15 +1,12 @@
 from django.urls import path
-from .views import LoginAPI, ChangePasswordView, ChildUpdateView, RegisterAPI, ChildDetailView, ChildListView, ChildCreateView
-from knox import views as knox_views
 from . import views
 
 urlpatterns = [
-    path('api/register/', RegisterAPI.as_view(), name='register'),
-    path('api/login/', LoginAPI.as_view(), name='login'),
-    path('api/logout/', knox_views.LogoutView.as_view(), name='logout'),
-    path('api/change-password/', ChangePasswordView.as_view(), name='change-password'),
-    path('api/child-list/', ChildListView.as_view(), name='child-list'),
-    path('api/child-detail/<pk>/', ChildDetailView.as_view(), name='child-detail'),
-    path('api/child-create/', ChildCreateView.as_view(), name='child-create'),
-    path('api/child-update/<pk>', ChildUpdateView.as_view(), name='child-update'),
+    path('child-create/', views.create_child, name = 'create-child'),
+    path('child-detail/<pk>/', views.list_child, name = 'list-child'),
+    path('child-update/<pk>', views.update_child, name='update-child'),
+    path('register/', views.register),
+    path('token/', views.token),
+    path('token/refresh/', views.refresh_token),
+    path('token/revoke/', views.revoke_token),
 ]
