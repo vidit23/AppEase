@@ -1,4 +1,4 @@
-"""mydashboard URL Configuration
+"""backendapi URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -14,16 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from activities import views
-
-
-app_name = 'main'
+from django.urls import path
+from django.conf.urls import include
+from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
-    path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
-    path('',include('activities.urls')),
-    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-    path('authentication/', include('activities.urls')),
+    path('api/',include('api.urls')),
+    path('auth/',obtain_auth_token)
 ]
