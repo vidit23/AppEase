@@ -1,8 +1,8 @@
 //
 //  ComplicationController.swift
-//  AppEase WatchKit Extension
+//  Testing WatchKit Extension
 //
-//  Created by Vidit Bhargava on 10/4/20.
+//  Created by Vidit Bhargava on 11/16/20.
 //
 
 import ClockKit
@@ -14,7 +14,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
     func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
         let descriptors = [
-            CLKComplicationDescriptor(identifier: "complication", displayName: "AppEase", supportedFamilies: CLKComplicationFamily.allCases)
+            CLKComplicationDescriptor(identifier: "complication", displayName: "Testing", supportedFamilies: CLKComplicationFamily.allCases)
             // Multiple complication support can be added here with more descriptors
         ]
         

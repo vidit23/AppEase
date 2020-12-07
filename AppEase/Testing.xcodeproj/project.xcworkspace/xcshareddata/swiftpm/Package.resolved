@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Franz",
+        "repositoryURL": "https://github.com/kellanburket/franz.git",
+        "state": {
+          "branch": null,
+          "revision": "c859f1a584ea949000b82d85b301b6bc25fad90e",
+          "version": "1.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

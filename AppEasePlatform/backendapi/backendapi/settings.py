@@ -25,7 +25,7 @@ SECRET_KEY = 'ky5een=x*bl4wzc#t6j+!+syurrng*ez6q#(qt!&cd2j227@00'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', '10.0.0.55']
 
 
 # Application definition
@@ -122,6 +122,15 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+
+#     'default' : {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'AppEase',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#    }
 }
 
 

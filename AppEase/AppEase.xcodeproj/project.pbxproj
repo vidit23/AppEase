@@ -3,78 +3,94 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F1893A4252A67F800A314D0 /* AppEaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1893A3252A67F800A314D0 /* AppEaseApp.swift */; };
-		2F1893A6252A67F800A314D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1893A5252A67F800A314D0 /* ContentView.swift */; };
-		2F1893A8252A67F900A314D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1893A7252A67F900A314D0 /* Assets.xcassets */; };
-		2F1893AB252A67F900A314D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1893AA252A67F900A314D0 /* Preview Assets.xcassets */; };
-		2F1893B6252A67F900A314D0 /* AppEaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1893B5252A67F900A314D0 /* AppEaseTests.swift */; };
-		2F1893C1252A67F900A314D0 /* AppEaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1893C0252A67F900A314D0 /* AppEaseUITests.swift */; };
-		2F1893C6252A67F900A314D0 /* AppEase WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2F1893C5252A67F900A314D0 /* AppEase WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2F1893CB252A67F900A314D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1893CA252A67F900A314D0 /* Assets.xcassets */; };
-		2F1893D2252A67F900A314D0 /* AppEase WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2F1893D1252A67F900A314D0 /* AppEase WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2F1893D7252A67F900A314D0 /* AppEaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1893D6252A67F900A314D0 /* AppEaseApp.swift */; };
-		2F1893D9252A67F900A314D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1893D8252A67F900A314D0 /* ContentView.swift */; };
-		2F1893DB252A67F900A314D0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1893DA252A67F900A314D0 /* NotificationController.swift */; };
-		2F1893DD252A67F900A314D0 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1893DC252A67F900A314D0 /* NotificationView.swift */; };
-		2F1893DF252A67F900A314D0 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1893DE252A67F900A314D0 /* ComplicationController.swift */; };
-		2F1893E1252A67FA00A314D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1893E0252A67FA00A314D0 /* Assets.xcassets */; };
-		2F1893E4252A67FA00A314D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F1893E3252A67FA00A314D0 /* Preview Assets.xcassets */; };
+		150E267F2578593F00D54C34 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150E267E2578593F00D54C34 /* LoginManager.swift */; };
+		2F09FA062572106900066EC4 /* ActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F09FA052572106900066EC4 /* ActivityManager.swift */; };
+		2F0C4F21257B87300043EF33 /* FileIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C4F20257B87300043EF33 /* FileIOManager.swift */; };
+		2F0C4F22257B87300043EF33 /* FileIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C4F20257B87300043EF33 /* FileIOManager.swift */; };
+		2F0C4F2F257B98C20043EF33 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C4F2E257B98C20043EF33 /* LoginView.swift */; };
+		2F0D0E11256CCC7500E5A0D0 /* Franz in Frameworks */ = {isa = PBXBuildFile; productRef = 2F0D0E10256CCC7500E5A0D0 /* Franz */; };
+		2F0D0E19256CCCBD00E5A0D0 /* KafkaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0D0E18256CCCBD00E5A0D0 /* KafkaManager.swift */; };
+		2F137B17257CBD0800792D1D /* UserStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F137B16257CBD0800792D1D /* UserStateManager.swift */; };
+		2F137B18257CBD0800792D1D /* UserStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F137B16257CBD0800792D1D /* UserStateManager.swift */; };
+		2F48AA28257C98C700E5F786 /* SensorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48AA27257C98C700E5F786 /* SensorDataManager.swift */; };
+		2FAA098925686A7200AEC16A /* PedometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA098825686A7200AEC16A /* PedometerManager.swift */; };
+		2FCB2BB8256792AA00A5E1B0 /* HealthObjectToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB2BB7256792AA00A5E1B0 /* HealthObjectToString.swift */; };
+		2FCB2BBD2567941E00A5E1B0 /* GetHealthStaticInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB2BBC2567941E00A5E1B0 /* GetHealthStaticInformation.swift */; };
+		2FCB2BC225679AB900A5E1B0 /* GenerateMockHeartRateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB2BC125679AB900A5E1B0 /* GenerateMockHeartRateData.swift */; };
+		2FCB2BC725679C7500A5E1B0 /* SensorDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB2BC625679C7500A5E1B0 /* SensorDataView.swift */; };
+		2FE09141256D8EB20092575C /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE09140256D8EB20092575C /* WatchConnectivityManager.swift */; };
+		2FE09142256D8EB20092575C /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE09140256D8EB20092575C /* WatchConnectivityManager.swift */; };
+		2FE38ECD25670F21001D272F /* FindAMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38ECC25670F21001D272F /* FindAMatch.swift */; };
+		2FE38ED525671017001D272F /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38ED425671017001D272F /* Cardify.swift */; };
+		2FE38EDA25671060001D272F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38ED925671060001D272F /* Array+Extensions.swift */; };
+		2FE38EDF2567108F001D272F /* Grid+GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38EDE2567108F001D272F /* Grid+GridLayout.swift */; };
+		2FE38EE4256710CD001D272F /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38EE3256710CD001D272F /* MemoryGame.swift */; };
+		2FE38EE9256710F3001D272F /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38EE8256710F3001D272F /* EmojiMemoryGame.swift */; };
+		2FE38EF0256711F6001D272F /* FindAMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38EEF256711F6001D272F /* FindAMatchView.swift */; };
+		2FE38EF825671284001D272F /* MemoryGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE38EF725671284001D272F /* MemoryGameView.swift */; };
+		2FF5E7652563866200BD1CE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5E7642563866200BD1CE1 /* AppDelegate.swift */; };
+		2FF5E7672563866200BD1CE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5E7662563866200BD1CE1 /* SceneDelegate.swift */; };
+		2FF5E7692563866200BD1CE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5E7682563866200BD1CE1 /* ContentView.swift */; };
+		2FF5E76B2563866400BD1CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5E76A2563866400BD1CE1 /* Assets.xcassets */; };
+		2FF5E76E2563866400BD1CE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5E76D2563866400BD1CE1 /* Preview Assets.xcassets */; };
+		2FF5E7712563866400BD1CE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5E76F2563866400BD1CE1 /* LaunchScreen.storyboard */; };
+		2FF5E7762563866400BD1CE1 /* AppEase WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2FF5E7752563866400BD1CE1 /* AppEase WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2FF5E77C2563866400BD1CE1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5E77A2563866400BD1CE1 /* Interface.storyboard */; };
+		2FF5E77E2563866400BD1CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5E77D2563866400BD1CE1 /* Assets.xcassets */; };
+		2FF5E7852563866400BD1CE1 /* AppEase WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2FF5E7842563866400BD1CE1 /* AppEase WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2FF5E78A2563866400BD1CE1 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5E7892563866400BD1CE1 /* HostingController.swift */; };
+		2FF5E78C2563866400BD1CE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5E78B2563866400BD1CE1 /* ContentView.swift */; };
+		2FF5E78E2563866400BD1CE1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5E78D2563866400BD1CE1 /* ExtensionDelegate.swift */; };
+		2FF5E7902563866400BD1CE1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5E78F2563866400BD1CE1 /* NotificationController.swift */; };
+		2FF5E7922563866400BD1CE1 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5E7912563866400BD1CE1 /* NotificationView.swift */; };
+		2FF5E7942563866400BD1CE1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5E7932563866400BD1CE1 /* ComplicationController.swift */; };
+		2FF5E7962563866500BD1CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5E7952563866500BD1CE1 /* Assets.xcassets */; };
+		2FF5E7992563866500BD1CE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5E7982563866500BD1CE1 /* Preview Assets.xcassets */; };
+		2FF5E7DF25638DB700BD1CE1 /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF5E7DE25638DB700BD1CE1 /* HealthStore.swift */; };
+		2FF5E7F02563AF0B00BD1CE1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF5E7EF2563AF0B00BD1CE1 /* HealthKit.framework */; };
+		2FF5E7F62563AF1600BD1CE1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF5E7F52563AF1600BD1CE1 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2F1893B2252A67F900A314D0 /* PBXContainerItemProxy */ = {
+		2FF5E7772563866400BD1CE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2F189398252A67F800A314D0 /* Project object */;
+			containerPortal = 2FF5E7592563866200BD1CE1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2F18939F252A67F800A314D0;
-			remoteInfo = AppEase;
+			remoteGlobalIDString = 2FF5E7742563866400BD1CE1;
+			remoteInfo = "Testing WatchKit App";
 		};
-		2F1893BD252A67F900A314D0 /* PBXContainerItemProxy */ = {
+		2FF5E7862563866400BD1CE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2F189398252A67F800A314D0 /* Project object */;
+			containerPortal = 2FF5E7592563866200BD1CE1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2F18939F252A67F800A314D0;
-			remoteInfo = AppEase;
-		};
-		2F1893C7252A67F900A314D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2F189398252A67F800A314D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2F1893C4252A67F900A314D0;
-			remoteInfo = "AppEase WatchKit App";
-		};
-		2F1893D3252A67F900A314D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2F189398252A67F800A314D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2F1893D0252A67F900A314D0;
-			remoteInfo = "AppEase WatchKit Extension";
+			remoteGlobalIDString = 2FF5E7832563866400BD1CE1;
+			remoteInfo = "Testing WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2F1893EC252A67FA00A314D0 /* Embed App Extensions */ = {
+		2FF5E7A12563866500BD1CE1 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2F1893D2252A67F900A314D0 /* AppEase WatchKit Extension.appex in Embed App Extensions */,
+				2FF5E7852563866400BD1CE1 /* AppEase WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F1893F0252A67FA00A314D0 /* Embed Watch Content */ = {
+		2FF5E7A52563866500BD1CE1 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				2F1893C6252A67F900A314D0 /* AppEase WatchKit App.app in Embed Watch Content */,
+				2FF5E7762563866400BD1CE1 /* AppEase WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,281 +98,317 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2F1893A0252A67F800A314D0 /* AppEase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppEase.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F1893A3252A67F800A314D0 /* AppEaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEaseApp.swift; sourceTree = "<group>"; };
-		2F1893A5252A67F800A314D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2F1893A7252A67F900A314D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2F1893AA252A67F900A314D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2F1893AC252A67F900A314D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F1893B1252A67F900A314D0 /* AppEaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppEaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F1893B5252A67F900A314D0 /* AppEaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEaseTests.swift; sourceTree = "<group>"; };
-		2F1893B7252A67F900A314D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F1893BC252A67F900A314D0 /* AppEaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppEaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F1893C0252A67F900A314D0 /* AppEaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEaseUITests.swift; sourceTree = "<group>"; };
-		2F1893C2252A67F900A314D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F1893C5252A67F900A314D0 /* AppEase WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppEase WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F1893CA252A67F900A314D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2F1893CC252A67F900A314D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F1893D1252A67F900A314D0 /* AppEase WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AppEase WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F1893D6252A67F900A314D0 /* AppEaseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEaseApp.swift; sourceTree = "<group>"; };
-		2F1893D8252A67F900A314D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2F1893DA252A67F900A314D0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		2F1893DC252A67F900A314D0 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		2F1893DE252A67F900A314D0 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		2F1893E0252A67FA00A314D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2F1893E3252A67FA00A314D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2F1893E5252A67FA00A314D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F1893E6252A67FA00A314D0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		150E267E2578593F00D54C34 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		2F09FA052572106900066EC4 /* ActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityManager.swift; sourceTree = "<group>"; };
+		2F0C4F20257B87300043EF33 /* FileIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIOManager.swift; sourceTree = "<group>"; };
+		2F0C4F2E257B98C20043EF33 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2F0D0E18256CCCBD00E5A0D0 /* KafkaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KafkaManager.swift; sourceTree = "<group>"; };
+		2F137B16257CBD0800792D1D /* UserStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateManager.swift; sourceTree = "<group>"; };
+		2F48AA27257C98C700E5F786 /* SensorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataManager.swift; sourceTree = "<group>"; };
+		2FAA098825686A7200AEC16A /* PedometerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerManager.swift; sourceTree = "<group>"; };
+		2FCB2BB7256792AA00A5E1B0 /* HealthObjectToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthObjectToString.swift; sourceTree = "<group>"; };
+		2FCB2BBC2567941E00A5E1B0 /* GetHealthStaticInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHealthStaticInformation.swift; sourceTree = "<group>"; };
+		2FCB2BC125679AB900A5E1B0 /* GenerateMockHeartRateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateMockHeartRateData.swift; sourceTree = "<group>"; };
+		2FCB2BC625679C7500A5E1B0 /* SensorDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataView.swift; sourceTree = "<group>"; };
+		2FE09140256D8EB20092575C /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		2FE38ECC25670F21001D272F /* FindAMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAMatch.swift; sourceTree = "<group>"; };
+		2FE38ED425671017001D272F /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
+		2FE38ED925671060001D272F /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		2FE38EDE2567108F001D272F /* Grid+GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Grid+GridLayout.swift"; sourceTree = "<group>"; };
+		2FE38EE3256710CD001D272F /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		2FE38EE8256710F3001D272F /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
+		2FE38EEF256711F6001D272F /* FindAMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAMatchView.swift; sourceTree = "<group>"; };
+		2FE38EF725671284001D272F /* MemoryGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameView.swift; sourceTree = "<group>"; };
+		2FF5E7612563866200BD1CE1 /* AppEase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppEase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FF5E7642563866200BD1CE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2FF5E7662563866200BD1CE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2FF5E7682563866200BD1CE1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2FF5E76A2563866400BD1CE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FF5E76D2563866400BD1CE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2FF5E7702563866400BD1CE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2FF5E7722563866400BD1CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FF5E7752563866400BD1CE1 /* AppEase WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppEase WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FF5E77B2563866400BD1CE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2FF5E77D2563866400BD1CE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FF5E77F2563866400BD1CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FF5E7842563866400BD1CE1 /* AppEase WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AppEase WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FF5E7892563866400BD1CE1 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		2FF5E78B2563866400BD1CE1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2FF5E78D2563866400BD1CE1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		2FF5E78F2563866400BD1CE1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2FF5E7912563866400BD1CE1 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		2FF5E7932563866400BD1CE1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		2FF5E7952563866500BD1CE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FF5E7982563866500BD1CE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2FF5E79A2563866500BD1CE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FF5E79B2563866500BD1CE1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		2FF5E7DE25638DB700BD1CE1 /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
+		2FF5E7ED2563AF0B00BD1CE1 /* AppEase WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AppEase WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		2FF5E7EF2563AF0B00BD1CE1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		2FF5E7F42563AF1600BD1CE1 /* AppEase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppEase.entitlements; sourceTree = "<group>"; };
+		2FF5E7F52563AF1600BD1CE1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F18939D252A67F800A314D0 /* Frameworks */ = {
+		2FF5E75E2563866200BD1CE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0D0E11256CCC7500E5A0D0 /* Franz in Frameworks */,
+				2FF5E7F62563AF1600BD1CE1 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F1893AE252A67F900A314D0 /* Frameworks */ = {
+		2FF5E7812563866400BD1CE1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F1893B9252A67F900A314D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F1893CE252A67F900A314D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2FF5E7F02563AF0B00BD1CE1 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F189397252A67F800A314D0 = {
+		2FAA0971256860D200AEC16A /* CoreMotion */ = {
 			isa = PBXGroup;
 			children = (
-				2F1893A2252A67F800A314D0 /* AppEase */,
-				2F1893B4252A67F900A314D0 /* AppEaseTests */,
-				2F1893BF252A67F900A314D0 /* AppEaseUITests */,
-				2F1893C9252A67F900A314D0 /* AppEase WatchKit App */,
-				2F1893D5252A67F900A314D0 /* AppEase WatchKit Extension */,
-				2F1893A1252A67F800A314D0 /* Products */,
+				2FAA098825686A7200AEC16A /* PedometerManager.swift */,
+				2F09FA052572106900066EC4 /* ActivityManager.swift */,
+			);
+			path = CoreMotion;
+			sourceTree = "<group>";
+		};
+		2FCB2BB22567923C00A5E1B0 /* SensorData */ = {
+			isa = PBXGroup;
+			children = (
+				2FCB2BC625679C7500A5E1B0 /* SensorDataView.swift */,
+				2F48AA27257C98C700E5F786 /* SensorDataManager.swift */,
+				2FAA0971256860D200AEC16A /* CoreMotion */,
+				2FCB2BB32567925100A5E1B0 /* Health */,
+			);
+			path = SensorData;
+			sourceTree = "<group>";
+		};
+		2FCB2BB32567925100A5E1B0 /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				2FF5E7DE25638DB700BD1CE1 /* HealthStore.swift */,
+				2FCB2BB7256792AA00A5E1B0 /* HealthObjectToString.swift */,
+				2FCB2BBC2567941E00A5E1B0 /* GetHealthStaticInformation.swift */,
+				2FCB2BC125679AB900A5E1B0 /* GenerateMockHeartRateData.swift */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		2FE38EED25671161001D272F /* MemoryGame */ = {
+			isa = PBXGroup;
+			children = (
+				2FE38ED425671017001D272F /* Cardify.swift */,
+				2FE38EE3256710CD001D272F /* MemoryGame.swift */,
+				2FE38ED925671060001D272F /* Array+Extensions.swift */,
+				2FE38EE8256710F3001D272F /* EmojiMemoryGame.swift */,
+				2FE38EDE2567108F001D272F /* Grid+GridLayout.swift */,
+				2FE38EF725671284001D272F /* MemoryGameView.swift */,
+			);
+			path = MemoryGame;
+			sourceTree = "<group>";
+		};
+		2FE38EEE256711AE001D272F /* FindAMatchGame */ = {
+			isa = PBXGroup;
+			children = (
+				2FE38ECC25670F21001D272F /* FindAMatch.swift */,
+				2FE38EEF256711F6001D272F /* FindAMatchView.swift */,
+			);
+			path = FindAMatchGame;
+			sourceTree = "<group>";
+		};
+		2FF5E7582563866200BD1CE1 = {
+			isa = PBXGroup;
+			children = (
+				2FF5E7E92563991600BD1CE1 /* Shared */,
+				2FF5E7632563866200BD1CE1 /* AppEase */,
+				2FF5E7792563866400BD1CE1 /* AppEase WatchKit App */,
+				2FF5E7882563866400BD1CE1 /* AppEase WatchKit Extension */,
+				2FF5E7622563866200BD1CE1 /* Products */,
+				2FF5E7EE2563AF0B00BD1CE1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		2F1893A1252A67F800A314D0 /* Products */ = {
+		2FF5E7622563866200BD1CE1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2F1893A0252A67F800A314D0 /* AppEase.app */,
-				2F1893B1252A67F900A314D0 /* AppEaseTests.xctest */,
-				2F1893BC252A67F900A314D0 /* AppEaseUITests.xctest */,
-				2F1893C5252A67F900A314D0 /* AppEase WatchKit App.app */,
-				2F1893D1252A67F900A314D0 /* AppEase WatchKit Extension.appex */,
+				2FF5E7612563866200BD1CE1 /* AppEase.app */,
+				2FF5E7752563866400BD1CE1 /* AppEase WatchKit App.app */,
+				2FF5E7842563866400BD1CE1 /* AppEase WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2F1893A2252A67F800A314D0 /* AppEase */ = {
+		2FF5E7632563866200BD1CE1 /* AppEase */ = {
 			isa = PBXGroup;
 			children = (
-				2F1893A3252A67F800A314D0 /* AppEaseApp.swift */,
-				2F1893A5252A67F800A314D0 /* ContentView.swift */,
-				2F1893A7252A67F900A314D0 /* Assets.xcassets */,
-				2F1893AC252A67F900A314D0 /* Info.plist */,
-				2F1893A9252A67F900A314D0 /* Preview Content */,
+				2FF5E7F42563AF1600BD1CE1 /* AppEase.entitlements */,
+				2FF5E7642563866200BD1CE1 /* AppDelegate.swift */,
+				2FF5E7662563866200BD1CE1 /* SceneDelegate.swift */,
+				2FF5E7682563866200BD1CE1 /* ContentView.swift */,
+				2FF5E76A2563866400BD1CE1 /* Assets.xcassets */,
+				2FF5E76F2563866400BD1CE1 /* LaunchScreen.storyboard */,
+				2FF5E7722563866400BD1CE1 /* Info.plist */,
+				2FF5E76C2563866400BD1CE1 /* Preview Content */,
+				2F0D0E18256CCCBD00E5A0D0 /* KafkaManager.swift */,
+				150E267E2578593F00D54C34 /* LoginManager.swift */,
+				2F0C4F2E257B98C20043EF33 /* LoginView.swift */,
 			);
 			path = AppEase;
 			sourceTree = "<group>";
 		};
-		2F1893A9252A67F900A314D0 /* Preview Content */ = {
+		2FF5E76C2563866400BD1CE1 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2F1893AA252A67F900A314D0 /* Preview Assets.xcassets */,
+				2FF5E76D2563866400BD1CE1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2F1893B4252A67F900A314D0 /* AppEaseTests */ = {
+		2FF5E7792563866400BD1CE1 /* AppEase WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				2F1893B5252A67F900A314D0 /* AppEaseTests.swift */,
-				2F1893B7252A67F900A314D0 /* Info.plist */,
-			);
-			path = AppEaseTests;
-			sourceTree = "<group>";
-		};
-		2F1893BF252A67F900A314D0 /* AppEaseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2F1893C0252A67F900A314D0 /* AppEaseUITests.swift */,
-				2F1893C2252A67F900A314D0 /* Info.plist */,
-			);
-			path = AppEaseUITests;
-			sourceTree = "<group>";
-		};
-		2F1893C9252A67F900A314D0 /* AppEase WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				2F1893CA252A67F900A314D0 /* Assets.xcassets */,
-				2F1893CC252A67F900A314D0 /* Info.plist */,
+				2FF5E77A2563866400BD1CE1 /* Interface.storyboard */,
+				2FF5E77D2563866400BD1CE1 /* Assets.xcassets */,
+				2FF5E77F2563866400BD1CE1 /* Info.plist */,
 			);
 			path = "AppEase WatchKit App";
 			sourceTree = "<group>";
 		};
-		2F1893D5252A67F900A314D0 /* AppEase WatchKit Extension */ = {
+		2FF5E7882563866400BD1CE1 /* AppEase WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				2F1893D6252A67F900A314D0 /* AppEaseApp.swift */,
-				2F1893D8252A67F900A314D0 /* ContentView.swift */,
-				2F1893DA252A67F900A314D0 /* NotificationController.swift */,
-				2F1893DC252A67F900A314D0 /* NotificationView.swift */,
-				2F1893DE252A67F900A314D0 /* ComplicationController.swift */,
-				2F1893E0252A67FA00A314D0 /* Assets.xcassets */,
-				2F1893E5252A67FA00A314D0 /* Info.plist */,
-				2F1893E6252A67FA00A314D0 /* PushNotificationPayload.apns */,
-				2F1893E2252A67FA00A314D0 /* Preview Content */,
+				2FCB2BB22567923C00A5E1B0 /* SensorData */,
+				2FE38EEE256711AE001D272F /* FindAMatchGame */,
+				2FE38EED25671161001D272F /* MemoryGame */,
+				2FF5E7ED2563AF0B00BD1CE1 /* AppEase WatchKit Extension.entitlements */,
+				2FF5E7892563866400BD1CE1 /* HostingController.swift */,
+				2FF5E78B2563866400BD1CE1 /* ContentView.swift */,
+				2FF5E78D2563866400BD1CE1 /* ExtensionDelegate.swift */,
+				2FF5E78F2563866400BD1CE1 /* NotificationController.swift */,
+				2FF5E7912563866400BD1CE1 /* NotificationView.swift */,
+				2FF5E7932563866400BD1CE1 /* ComplicationController.swift */,
+				2FF5E7952563866500BD1CE1 /* Assets.xcassets */,
+				2FF5E79A2563866500BD1CE1 /* Info.plist */,
+				2FF5E79B2563866500BD1CE1 /* PushNotificationPayload.apns */,
+				2FF5E7972563866500BD1CE1 /* Preview Content */,
 			);
 			path = "AppEase WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		2F1893E2252A67FA00A314D0 /* Preview Content */ = {
+		2FF5E7972563866500BD1CE1 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2F1893E3252A67FA00A314D0 /* Preview Assets.xcassets */,
+				2FF5E7982563866500BD1CE1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2FF5E7E92563991600BD1CE1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2FE09140256D8EB20092575C /* WatchConnectivityManager.swift */,
+				2F0C4F20257B87300043EF33 /* FileIOManager.swift */,
+				2F137B16257CBD0800792D1D /* UserStateManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		2FF5E7EE2563AF0B00BD1CE1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FF5E7F52563AF1600BD1CE1 /* HealthKit.framework */,
+				2FF5E7EF2563AF0B00BD1CE1 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2F18939F252A67F800A314D0 /* AppEase */ = {
+		2FF5E7602563866200BD1CE1 /* AppEase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F1893F1252A67FA00A314D0 /* Build configuration list for PBXNativeTarget "AppEase" */;
+			buildConfigurationList = 2FF5E7A62563866500BD1CE1 /* Build configuration list for PBXNativeTarget "AppEase" */;
 			buildPhases = (
-				2F18939C252A67F800A314D0 /* Sources */,
-				2F18939D252A67F800A314D0 /* Frameworks */,
-				2F18939E252A67F800A314D0 /* Resources */,
-				2F1893F0252A67FA00A314D0 /* Embed Watch Content */,
+				2FF5E75D2563866200BD1CE1 /* Sources */,
+				2FF5E75E2563866200BD1CE1 /* Frameworks */,
+				2FF5E75F2563866200BD1CE1 /* Resources */,
+				2FF5E7A52563866500BD1CE1 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2F1893C8252A67F900A314D0 /* PBXTargetDependency */,
+				2FF5E7782563866400BD1CE1 /* PBXTargetDependency */,
 			);
 			name = AppEase;
-			productName = AppEase;
-			productReference = 2F1893A0252A67F800A314D0 /* AppEase.app */;
+			packageProductDependencies = (
+				2F0D0E10256CCC7500E5A0D0 /* Franz */,
+			);
+			productName = Testing;
+			productReference = 2FF5E7612563866200BD1CE1 /* AppEase.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2F1893B0252A67F900A314D0 /* AppEaseTests */ = {
+		2FF5E7742563866400BD1CE1 /* AppEase WatchKit App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F1893F4252A67FA00A314D0 /* Build configuration list for PBXNativeTarget "AppEaseTests" */;
+			buildConfigurationList = 2FF5E7A22563866500BD1CE1 /* Build configuration list for PBXNativeTarget "AppEase WatchKit App" */;
 			buildPhases = (
-				2F1893AD252A67F900A314D0 /* Sources */,
-				2F1893AE252A67F900A314D0 /* Frameworks */,
-				2F1893AF252A67F900A314D0 /* Resources */,
+				2FF5E7732563866400BD1CE1 /* Resources */,
+				2FF5E7A12563866500BD1CE1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2F1893B3252A67F900A314D0 /* PBXTargetDependency */,
-			);
-			name = AppEaseTests;
-			productName = AppEaseTests;
-			productReference = 2F1893B1252A67F900A314D0 /* AppEaseTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2F1893BB252A67F900A314D0 /* AppEaseUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2F1893F7252A67FA00A314D0 /* Build configuration list for PBXNativeTarget "AppEaseUITests" */;
-			buildPhases = (
-				2F1893B8252A67F900A314D0 /* Sources */,
-				2F1893B9252A67F900A314D0 /* Frameworks */,
-				2F1893BA252A67F900A314D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2F1893BE252A67F900A314D0 /* PBXTargetDependency */,
-			);
-			name = AppEaseUITests;
-			productName = AppEaseUITests;
-			productReference = 2F1893BC252A67F900A314D0 /* AppEaseUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		2F1893C4252A67F900A314D0 /* AppEase WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2F1893ED252A67FA00A314D0 /* Build configuration list for PBXNativeTarget "AppEase WatchKit App" */;
-			buildPhases = (
-				2F1893C3252A67F900A314D0 /* Resources */,
-				2F1893EC252A67FA00A314D0 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2F1893D4252A67F900A314D0 /* PBXTargetDependency */,
+				2FF5E7872563866400BD1CE1 /* PBXTargetDependency */,
 			);
 			name = "AppEase WatchKit App";
-			productName = "AppEase WatchKit App";
-			productReference = 2F1893C5252A67F900A314D0 /* AppEase WatchKit App.app */;
+			productName = "Testing WatchKit App";
+			productReference = 2FF5E7752563866400BD1CE1 /* AppEase WatchKit App.app */;
 			productType = "com.apple.product-type.application.watchapp2";
 		};
-		2F1893D0252A67F900A314D0 /* AppEase WatchKit Extension */ = {
+		2FF5E7832563866400BD1CE1 /* AppEase WatchKit Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F1893E9252A67FA00A314D0 /* Build configuration list for PBXNativeTarget "AppEase WatchKit Extension" */;
+			buildConfigurationList = 2FF5E79E2563866500BD1CE1 /* Build configuration list for PBXNativeTarget "AppEase WatchKit Extension" */;
 			buildPhases = (
-				2F1893CD252A67F900A314D0 /* Sources */,
-				2F1893CE252A67F900A314D0 /* Frameworks */,
-				2F1893CF252A67F900A314D0 /* Resources */,
+				2FF5E7802563866400BD1CE1 /* Sources */,
+				2FF5E7812563866400BD1CE1 /* Frameworks */,
+				2FF5E7822563866400BD1CE1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "AppEase WatchKit Extension";
-			productName = "AppEase WatchKit Extension";
-			productReference = 2F1893D1252A67F900A314D0 /* AppEase WatchKit Extension.appex */;
+			productName = "Testing WatchKit Extension";
+			productReference = 2FF5E7842563866400BD1CE1 /* AppEase WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2F189398252A67F800A314D0 /* Project object */ = {
+		2FF5E7592563866200BD1CE1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
-					2F18939F252A67F800A314D0 = {
-						CreatedOnToolsVersion = 12.0.1;
+					2FF5E7602563866200BD1CE1 = {
+						CreatedOnToolsVersion = 12.2;
 					};
-					2F1893B0252A67F900A314D0 = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 2F18939F252A67F800A314D0;
+					2FF5E7742563866400BD1CE1 = {
+						CreatedOnToolsVersion = 12.2;
 					};
-					2F1893BB252A67F900A314D0 = {
-						CreatedOnToolsVersion = 12.0.1;
-						TestTargetID = 2F18939F252A67F800A314D0;
-					};
-					2F1893C4252A67F900A314D0 = {
-						CreatedOnToolsVersion = 12.0.1;
-					};
-					2F1893D0252A67F900A314D0 = {
-						CreatedOnToolsVersion = 12.0.1;
+					2FF5E7832563866400BD1CE1 = {
+						CreatedOnToolsVersion = 12.2;
 					};
 				};
 			};
-			buildConfigurationList = 2F18939B252A67F800A314D0 /* Build configuration list for PBXProject "AppEase" */;
+			buildConfigurationList = 2FF5E75C2563866200BD1CE1 /* Build configuration list for PBXProject "AppEase" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -364,128 +416,137 @@
 				en,
 				Base,
 			);
-			mainGroup = 2F189397252A67F800A314D0;
-			productRefGroup = 2F1893A1252A67F800A314D0 /* Products */;
+			mainGroup = 2FF5E7582563866200BD1CE1;
+			packageReferences = (
+				2F0D0E0F256CCC7500E5A0D0 /* XCRemoteSwiftPackageReference "franz" */,
+			);
+			productRefGroup = 2FF5E7622563866200BD1CE1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2F18939F252A67F800A314D0 /* AppEase */,
-				2F1893B0252A67F900A314D0 /* AppEaseTests */,
-				2F1893BB252A67F900A314D0 /* AppEaseUITests */,
-				2F1893C4252A67F900A314D0 /* AppEase WatchKit App */,
-				2F1893D0252A67F900A314D0 /* AppEase WatchKit Extension */,
+				2FF5E7602563866200BD1CE1 /* AppEase */,
+				2FF5E7742563866400BD1CE1 /* AppEase WatchKit App */,
+				2FF5E7832563866400BD1CE1 /* AppEase WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2F18939E252A67F800A314D0 /* Resources */ = {
+		2FF5E75F2563866200BD1CE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F1893AB252A67F900A314D0 /* Preview Assets.xcassets in Resources */,
-				2F1893A8252A67F900A314D0 /* Assets.xcassets in Resources */,
+				2FF5E7712563866400BD1CE1 /* LaunchScreen.storyboard in Resources */,
+				2FF5E76E2563866400BD1CE1 /* Preview Assets.xcassets in Resources */,
+				2FF5E76B2563866400BD1CE1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F1893AF252A67F900A314D0 /* Resources */ = {
+		2FF5E7732563866400BD1CE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF5E77E2563866400BD1CE1 /* Assets.xcassets in Resources */,
+				2FF5E77C2563866400BD1CE1 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F1893BA252A67F900A314D0 /* Resources */ = {
+		2FF5E7822563866400BD1CE1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F1893C3252A67F900A314D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F1893CB252A67F900A314D0 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F1893CF252A67F900A314D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F1893E4252A67FA00A314D0 /* Preview Assets.xcassets in Resources */,
-				2F1893E1252A67FA00A314D0 /* Assets.xcassets in Resources */,
+				2FF5E7992563866500BD1CE1 /* Preview Assets.xcassets in Resources */,
+				2FF5E7962563866500BD1CE1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2F18939C252A67F800A314D0 /* Sources */ = {
+		2FF5E75D2563866200BD1CE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F1893A6252A67F800A314D0 /* ContentView.swift in Sources */,
-				2F1893A4252A67F800A314D0 /* AppEaseApp.swift in Sources */,
+				150E267F2578593F00D54C34 /* LoginManager.swift in Sources */,
+				2F0C4F21257B87300043EF33 /* FileIOManager.swift in Sources */,
+				2F0C4F2F257B98C20043EF33 /* LoginView.swift in Sources */,
+				2F137B17257CBD0800792D1D /* UserStateManager.swift in Sources */,
+				2FF5E7652563866200BD1CE1 /* AppDelegate.swift in Sources */,
+				2FF5E7672563866200BD1CE1 /* SceneDelegate.swift in Sources */,
+				2F0D0E19256CCCBD00E5A0D0 /* KafkaManager.swift in Sources */,
+				2FE09141256D8EB20092575C /* WatchConnectivityManager.swift in Sources */,
+				2FF5E7692563866200BD1CE1 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F1893AD252A67F900A314D0 /* Sources */ = {
+		2FF5E7802563866400BD1CE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F1893B6252A67F900A314D0 /* AppEaseTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F1893B8252A67F900A314D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F1893C1252A67F900A314D0 /* AppEaseUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F1893CD252A67F900A314D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F1893DB252A67F900A314D0 /* NotificationController.swift in Sources */,
-				2F1893D9252A67F900A314D0 /* ContentView.swift in Sources */,
-				2F1893DF252A67F900A314D0 /* ComplicationController.swift in Sources */,
-				2F1893D7252A67F900A314D0 /* AppEaseApp.swift in Sources */,
-				2F1893DD252A67F900A314D0 /* NotificationView.swift in Sources */,
+				2FF5E78C2563866400BD1CE1 /* ContentView.swift in Sources */,
+				2F48AA28257C98C700E5F786 /* SensorDataManager.swift in Sources */,
+				2F137B18257CBD0800792D1D /* UserStateManager.swift in Sources */,
+				2FE38EDA25671060001D272F /* Array+Extensions.swift in Sources */,
+				2FF5E78A2563866400BD1CE1 /* HostingController.swift in Sources */,
+				2FCB2BC725679C7500A5E1B0 /* SensorDataView.swift in Sources */,
+				2FF5E7DF25638DB700BD1CE1 /* HealthStore.swift in Sources */,
+				2FE38EDF2567108F001D272F /* Grid+GridLayout.swift in Sources */,
+				2FE38ED525671017001D272F /* Cardify.swift in Sources */,
+				2FE38EE9256710F3001D272F /* EmojiMemoryGame.swift in Sources */,
+				2FE38EE4256710CD001D272F /* MemoryGame.swift in Sources */,
+				2FF5E7902563866400BD1CE1 /* NotificationController.swift in Sources */,
+				2FCB2BC225679AB900A5E1B0 /* GenerateMockHeartRateData.swift in Sources */,
+				2FE38EF0256711F6001D272F /* FindAMatchView.swift in Sources */,
+				2FCB2BBD2567941E00A5E1B0 /* GetHealthStaticInformation.swift in Sources */,
+				2FE38ECD25670F21001D272F /* FindAMatch.swift in Sources */,
+				2FAA098925686A7200AEC16A /* PedometerManager.swift in Sources */,
+				2FF5E78E2563866400BD1CE1 /* ExtensionDelegate.swift in Sources */,
+				2F0C4F22257B87300043EF33 /* FileIOManager.swift in Sources */,
+				2FCB2BB8256792AA00A5E1B0 /* HealthObjectToString.swift in Sources */,
+				2FF5E7922563866400BD1CE1 /* NotificationView.swift in Sources */,
+				2FE38EF825671284001D272F /* MemoryGameView.swift in Sources */,
+				2FE09142256D8EB20092575C /* WatchConnectivityManager.swift in Sources */,
+				2FF5E7942563866400BD1CE1 /* ComplicationController.swift in Sources */,
+				2F09FA062572106900066EC4 /* ActivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2F1893B3252A67F900A314D0 /* PBXTargetDependency */ = {
+		2FF5E7782563866400BD1CE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2F18939F252A67F800A314D0 /* AppEase */;
-			targetProxy = 2F1893B2252A67F900A314D0 /* PBXContainerItemProxy */;
+			target = 2FF5E7742563866400BD1CE1 /* AppEase WatchKit App */;
+			targetProxy = 2FF5E7772563866400BD1CE1 /* PBXContainerItemProxy */;
 		};
-		2F1893BE252A67F900A314D0 /* PBXTargetDependency */ = {
+		2FF5E7872563866400BD1CE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2F18939F252A67F800A314D0 /* AppEase */;
-			targetProxy = 2F1893BD252A67F900A314D0 /* PBXContainerItemProxy */;
-		};
-		2F1893C8252A67F900A314D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2F1893C4252A67F900A314D0 /* AppEase WatchKit App */;
-			targetProxy = 2F1893C7252A67F900A314D0 /* PBXContainerItemProxy */;
-		};
-		2F1893D4252A67F900A314D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2F1893D0252A67F900A314D0 /* AppEase WatchKit Extension */;
-			targetProxy = 2F1893D3252A67F900A314D0 /* PBXContainerItemProxy */;
+			target = 2FF5E7832563866400BD1CE1 /* AppEase WatchKit Extension */;
+			targetProxy = 2FF5E7862563866400BD1CE1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		2FF5E76F2563866400BD1CE1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FF5E7702563866400BD1CE1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2FF5E77A2563866400BD1CE1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FF5E77B2563866400BD1CE1 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		2F1893E7252A67FA00A314D0 /* Debug */ = {
+		2FF5E79C2563866500BD1CE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -544,7 +605,7 @@
 			};
 			name = Debug;
 		};
-		2F1893E8252A67FA00A314D0 /* Release */ = {
+		2FF5E79D2563866500BD1CE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -596,10 +657,11 @@
 			};
 			name = Release;
 		};
-		2F1893EA252A67FA00A314D0 /* Debug */ = {
+		2FF5E79F2563866500BD1CE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "AppEase WatchKit Extension/AppEase WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AppEase WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 39K7MPQSZX;
@@ -616,14 +678,15 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
-		2F1893EB252A67FA00A314D0 /* Release */ = {
+		2FF5E7A02563866500BD1CE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "AppEase WatchKit Extension/AppEase WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AppEase WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 39K7MPQSZX;
@@ -641,11 +704,11 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
-		2F1893EE252A67FA00A314D0 /* Debug */ = {
+		2FF5E7A32563866500BD1CE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -661,11 +724,11 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
-		2F1893EF252A67FA00A314D0 /* Release */ = {
+		2FF5E7A42563866500BD1CE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -682,21 +745,22 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
-		2F1893F2252A67FA00A314D0 /* Debug */ = {
+		2FF5E7A72563866500BD1CE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppEase/AppEase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AppEase/Preview Content\"";
 				DEVELOPMENT_TEAM = 39K7MPQSZX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppEase/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,17 +773,18 @@
 			};
 			name = Debug;
 		};
-		2F1893F3252A67FA00A314D0 /* Release */ = {
+		2FF5E7A82563866500BD1CE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppEase/AppEase.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"AppEase/Preview Content\"";
 				DEVELOPMENT_TEAM = 39K7MPQSZX;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = AppEase/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -729,98 +794,6 @@
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2F1893F5252A67FA00A314D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39K7MPQSZX;
-				INFOPLIST_FILE = AppEaseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itp.AppEaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppEase.app/AppEase";
-			};
-			name = Debug;
-		};
-		2F1893F6252A67FA00A314D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39K7MPQSZX;
-				INFOPLIST_FILE = AppEaseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itp.AppEaseTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AppEase.app/AppEase";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2F1893F8252A67FA00A314D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39K7MPQSZX;
-				INFOPLIST_FILE = AppEaseUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itp.AppEaseUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AppEase;
-			};
-			name = Debug;
-		};
-		2F1893F9252A67FA00A314D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39K7MPQSZX;
-				INFOPLIST_FILE = AppEaseUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itp.AppEaseUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AppEase;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -828,61 +801,62 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2F18939B252A67F800A314D0 /* Build configuration list for PBXProject "AppEase" */ = {
+		2FF5E75C2563866200BD1CE1 /* Build configuration list for PBXProject "AppEase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F1893E7252A67FA00A314D0 /* Debug */,
-				2F1893E8252A67FA00A314D0 /* Release */,
+				2FF5E79C2563866500BD1CE1 /* Debug */,
+				2FF5E79D2563866500BD1CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F1893E9252A67FA00A314D0 /* Build configuration list for PBXNativeTarget "AppEase WatchKit Extension" */ = {
+		2FF5E79E2563866500BD1CE1 /* Build configuration list for PBXNativeTarget "AppEase WatchKit Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F1893EA252A67FA00A314D0 /* Debug */,
-				2F1893EB252A67FA00A314D0 /* Release */,
+				2FF5E79F2563866500BD1CE1 /* Debug */,
+				2FF5E7A02563866500BD1CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F1893ED252A67FA00A314D0 /* Build configuration list for PBXNativeTarget "AppEase WatchKit App" */ = {
+		2FF5E7A22563866500BD1CE1 /* Build configuration list for PBXNativeTarget "AppEase WatchKit App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F1893EE252A67FA00A314D0 /* Debug */,
-				2F1893EF252A67FA00A314D0 /* Release */,
+				2FF5E7A32563866500BD1CE1 /* Debug */,
+				2FF5E7A42563866500BD1CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F1893F1252A67FA00A314D0 /* Build configuration list for PBXNativeTarget "AppEase" */ = {
+		2FF5E7A62563866500BD1CE1 /* Build configuration list for PBXNativeTarget "AppEase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F1893F2252A67FA00A314D0 /* Debug */,
-				2F1893F3252A67FA00A314D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2F1893F4252A67FA00A314D0 /* Build configuration list for PBXNativeTarget "AppEaseTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2F1893F5252A67FA00A314D0 /* Debug */,
-				2F1893F6252A67FA00A314D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2F1893F7252A67FA00A314D0 /* Build configuration list for PBXNativeTarget "AppEaseUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2F1893F8252A67FA00A314D0 /* Debug */,
-				2F1893F9252A67FA00A314D0 /* Release */,
+				2FF5E7A72563866500BD1CE1 /* Debug */,
+				2FF5E7A82563866500BD1CE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F0D0E0F256CCC7500E5A0D0 /* XCRemoteSwiftPackageReference "franz" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kellanburket/franz.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F0D0E10256CCC7500E5A0D0 /* Franz */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F0D0E0F256CCC7500E5A0D0 /* XCRemoteSwiftPackageReference "franz" */;
+			productName = Franz;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 2F189398252A67F800A314D0 /* Project object */;
+	rootObject = 2FF5E7592563866200BD1CE1 /* Project object */;
 }

@@ -1,8 +1,8 @@
 //
 //  NotificationController.swift
-//  AppEase WatchKit Extension
+//  Testing WatchKit Extension
 //
-//  Created by Vidit Bhargava on 10/4/20.
+//  Created by Vidit Bhargava on 11/16/20.
 //
 
 import WatchKit
