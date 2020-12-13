@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
-# from child.models import Child
+from .models import healthData
 
 class UserSeralizer(serializers.ModelSerializer):
     # child = serializers.HyperlinkedRelatedField(many=True, view_name='child-detail',read_only=True)
@@ -16,6 +16,18 @@ class UserSeralizer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         Token.objects.create(user=user)
         return user
+
+class HealthStaticSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = healthData
+        fields = ('age','sex','bloodtype','timestamp','usertoken')
+
+class HealthDynamicSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = healthData
+        fields = ('timestamp','usertoken','heartrate','stepscount', \
+        'stationarylabelcount','walkinglabelcount','runninglabelcount','automotivelabelcount','cyclinglabelcount',
+        'unknownlabelcount','distancecovered')
 
 # class ChildSerializer(serializers.HyperlinkedModelSerializer):
 #     owner = serializers.ReadOnlyField(source='owner.username')
