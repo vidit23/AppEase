@@ -76,3 +76,13 @@ class healthData(models.Model):
 # runningLabelCount , automotiveLabelCount ,
 # cyclingLabelCount , unknownLabelCount
 # FROM healthData;
+
+# | 1,"2020-12-07T06:54:50Z","de83f26f38e4c6eb7dfc8619bad9f37954980b37", 25,"Male","B+",112,9,0.00355675197751603,0,0,0,0,0,0
+
+
+# INSERT INTO healthData(timeStamp, userToken, age, sex, bloodType,
+#    heartRate, stepsCount, distanceCovered,
+#    stationaryLabelCount, walkingLabelCount ,
+#    runningLabelCount , automotiveLabelCount ,
+#    cyclingLabelCount , unknownLabelCount )
+#    VALUES("2020-12-07T08:11:70Z","3a6f4a45512afe7764b285fd841d026bf418153d", 25,"Male","B+",120,9,0.00355675197751603,0,0,0,0,0,0)

@@ -15,7 +15,7 @@ class Login extends Component {
         redirect: false
     }
     login = event => {
-        fetch('http://127.0.0.1:8000/api/login/', {
+        fetch('http://127.0.0.1:8000/auth/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -25,7 +25,6 @@ class Login extends Component {
         .then(response => response.json())
         .then(
             data => {
-                console.log(data);
                 setUserSession(data.token, this.state.credentials.username);
                 this.setState({
                     redirect: true
@@ -34,7 +33,7 @@ class Login extends Component {
         ).catch(error => console.error(error))
     }
     register = event => {
-        fetch('http://127.0.0.1:8000/api/register/', {
+        fetch('http://127.0.0.1:8000/api/users/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -44,7 +43,6 @@ class Login extends Component {
         .then(response => response.json())
         .then(
             data => {
-                console.log(data);
                 // setUserSession(data.token, data.user.username);
                 this.setState({
                     redirect: true
@@ -59,7 +57,6 @@ class Login extends Component {
     }
     inputChanged = event => {
         const credentials = this.state.credentials;
-        console.log(credentials)
         credentials[event.target.name] = event.target.value;
         this.setState({ credentials: credentials })
     }
@@ -69,45 +66,8 @@ class Login extends Component {
         }
         return ( 
             <div className = "App" >
-                <Form>
-                    <Row>
-                        <Col>
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" />
-                                <Form.Text className="text-muted">
-                                    We'll never share your email with anyone else.
-                                </Form.Text>
-                            </Form.Group>
-                        </Col>
-                        <Col>
-                            <Form.Group controlId="formBasicPassword">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password" />
-                            </Form.Group>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <Form.Group controlId="formBasicCheckbox">
-                                <Form.Check type="checkbox" label="Check me out" />
-                            </Form.Group>
-                        </Col>
-                        <Col>
-                            <Button variant="primary" type="submit">
-                                Submit
-                            </Button>
-                        </Col>
-                    </Row>
-                </Form>
+                
                 <h1> Login User </h1> 
-                {this.state.register && <label> Email:
-                    <input type = 'email'
-                        name = 'email'
-                        value = { this.state.credentials.email }
-                        onChange = { this.inputChanged }
-                    /> 
-                </label>}
                 <label > Username:
                     <input type = 'text'
                         name = 'username'

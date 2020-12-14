@@ -1,0 +1,40 @@
+[{
+        "stepCount": "2",
+        "runningLabel": "0",
+        "unknownLabel": "0",
+        "walkingLabel": "0",
+        "distance": "20",
+        "stationaryCount": "0",
+        "heartRate": "105",
+        "automotiveLabel": "0",
+        "steps": "0",
+        "cyclingLabel": "0",
+        "TimeStamp": "1400425947000"
+    },
+    {
+        "stepCount": "1",
+        "runningLabel": "0",
+        "unknownLabel": "0",
+        "walkingLabel": "2",
+        "distance": "0",
+        "stationaryCount": "0",
+        "heartRate": "105",
+        "automotiveLabel": "0",
+        "steps": "0",
+        "cyclingLabel": "0",
+        "TimeStamp": "1400425948000"
+    },
+    {
+        "stepCount": "3",
+        "runningLabel": "0",
+        "unknownLabel": "0",
+        "walkingLabel": "1",
+        "distance": "30",
+        "stationaryCount": "0",
+        "heartRate": "105",
+        "automotiveLabel": "0",
+        "steps": "0",
+        "cyclingLabel": "0",
+        "TimeStamp": "1400425949000"
+    }
+]
