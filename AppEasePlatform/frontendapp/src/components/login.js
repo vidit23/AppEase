@@ -25,7 +25,6 @@ class Login extends Component {
         .then(response => response.json())
         .then(
             data => {
-                console.log(data);
                 setUserSession(data.token, this.state.credentials.username);
                 this.setState({
                     redirect: true
@@ -44,7 +43,6 @@ class Login extends Component {
         .then(response => response.json())
         .then(
             data => {
-                console.log(data);
                 // setUserSession(data.token, data.user.username);
                 this.setState({
                     redirect: true
@@ -59,7 +57,6 @@ class Login extends Component {
     }
     inputChanged = event => {
         const credentials = this.state.credentials;
-        console.log(credentials)
         credentials[event.target.name] = event.target.value;
         this.setState({ credentials: credentials })
     }

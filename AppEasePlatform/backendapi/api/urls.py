@@ -3,6 +3,7 @@ from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
 from .views import UserViewSet
+from . import views
 # from child import views
 
 
@@ -11,6 +12,8 @@ router.register('users',UserViewSet)
 
 urlpatterns = [
     path('',include(router.urls)),
+    path('healthStatic/<userToken>/',views.healthStaticView,name = 'static-api'),
+    path('healthDynamic/<userToken>/',views.healthDynamicView,name = 'dynamic-api')
 #     path('child/',
 #          views.ChildList.as_view(),
 #          name='child-list'),
