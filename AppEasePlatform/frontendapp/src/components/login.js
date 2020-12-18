@@ -68,25 +68,27 @@ class Login extends Component {
             <div className = "App" >
                 
                 <h1> Login User </h1> 
-                <label > Username:
+                <label className='input-label'> Username:
                     <input type = 'text'
                         name = 'username'
                         value = { this.state.credentials.username }
                         onChange = { this.inputChanged }
+                        className = 'input-text'
                     />     
                 </label>
                 <br/>
-                <label> Password:
+                <label className='input-label'> Password:
                     <input type = 'password'
                         name = 'password'
                         value = { this.state.credentials.password }
                         onChange = { this.inputChanged }
+                        className = 'input-text'
                     /> 
                 </label>
                 <br/>
-                {!this.state.register && <button onClick = { this.login } > Login </button> }
-                <a onClick = { this.registerstate } > Not a member? Click to register </a> 
-                {this.state.register && <button onClick = { this.register } > Register </button> }
+                {!this.state.register && <button onClick = { this.login } className='login-button'> Login </button> }
+                <a onClick = { this.registerstate } className = 'link'> Not a member? Click to register </a> 
+                {this.state.register && <button onClick = { this.register } className='login-button'> Register </button> }
             </div>
         );
     }
