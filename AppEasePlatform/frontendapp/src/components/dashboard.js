@@ -61,14 +61,14 @@ class Dashboard extends Component {
             const user_data = this.state.user_data[0];
             const health_data = this.state.health_data;
             let step_data = [];
-            let walking_data = [];
+            let heart_data = [];
             for (var i = 0; i < health_data.length; i++) {
                 let time = parseInt(health_data[i].TimeStamp);
                 let step = parseInt(health_data[i].stepCount);
-                let walking = parseInt(health_data[i].walkingLabel);
+                let heart = parseInt(health_data[i].heartrate);
                 
                 step_data.push([time, step]);
-                walking_data.push([time, walking]);
+                heart_data.push([time, heart]);
             }
             const series1 = new TimeSeries({
                 name: "Step Count",
@@ -77,9 +77,9 @@ class Dashboard extends Component {
             });
 
             const series2 = new TimeSeries({
-                name: "Walk Count",
-                columns: ["time", "walk"],
-                points: walking_data
+                name: "Heart Rate",
+                columns: ["time", "heart_rate"],
+                points: heart_data
             });
 
             return (
@@ -93,16 +93,16 @@ class Dashboard extends Component {
                     </div>
                     <div className='graphs'>
                         <Resizable>
-                            <ChartContainer timeRange={series1.range()}>
+                            <ChartContainer timeRange={series2.range()}>
                                 <ChartRow height="150">
                                     <YAxis id="step" label="Step" width="50" min={series1.min()} max={series1.max()}  />
                                     <Charts>
                                         <LineChart axis="step" series={series1} />
-                                        <LineChart axis="walk" series={series2}/>
+                                        <LineChart axis="heart" series={series2}/>
                                     </Charts>
                                     
                                 
-                                    <YAxis id="walk" label="Wlak" width="50" min={series1.min()} max={series1.max()}  />
+                                    <YAxis id="heart" label="Heart Rate" width="50" min={series2.min()} max={series2.max()}  />
                                     
                                     
                                 </ChartRow>
