@@ -23,7 +23,7 @@ class Dashboard extends Component {
     componentDidMount() {
         const token = getToken();
         const name = getUser();
-        fetch(`http://127.0.0.1:8000/api/healthStatic/${token}/`)
+        fetch(`http://192.168.0.155:8000/api/healthStatic/${token}/`)
           .then(res => res.json())
           .then(
             (result) => {
@@ -39,7 +39,7 @@ class Dashboard extends Component {
                 console.log(error);
             }
         )
-        fetch(`http://127.0.0.1:8000/api/healthDynamic/${token}/`)
+        fetch(`http://192.168.0.155:8000/api/healthDynamic/${token}/`)
           .then(res => res.json())
           .then(
             (result) => {

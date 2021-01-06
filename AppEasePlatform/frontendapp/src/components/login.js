@@ -15,7 +15,7 @@ class Login extends Component {
         redirect: false
     }
     login = event => {
-        fetch('http://127.0.0.1:8000/auth/', {
+        fetch('http://192.168.0.155:8000/auth/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ class Login extends Component {
         ).catch(error => console.error(error))
     }
     register = event => {
-        fetch('http://127.0.0.1:8000/api/users/', {
+        fetch('http://192.168.0.155:8000/api/users/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
