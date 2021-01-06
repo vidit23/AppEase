@@ -29,7 +29,7 @@ def tableExists(tableName):
 
 if not tableExists("healthData"):
     c.execute('''create table healthData (
-    timeStamp text, userToken text, age integer, sex text, bloodType text,
+    id integer primary key, timeStamp text, userToken text, age integer, sex text, bloodType text,
     heartRate integer, stepsCount integer, distanceCovered real, 
     stationaryLabelCount integer, walkingLabelCount integer, 
     runningLabelCount integer, automotiveLabelCount integer, 
@@ -39,12 +39,12 @@ if not tableExists("healthData"):
     print('Created the health table')
 
 if not tableExists("locationData"):
-    c.execute('''create table locationData (timeStamp text, userToken text, longitude real, latitude real)''')
+    c.execute('''create table locationData (id integer primary key, timeStamp text, userToken text, longitude real, latitude real)''')
     conn.commit()
     print('Created the location table')
 
 if not tableExists("gameLogData"):
-    c.execute('''create table gameLogData (timeStamp text, userToken text, gameStatus text, gameName text)''')
+    c.execute('''create table gameLogData (id integer primary key, timeStamp text, userToken text, gameStatus text, gameName text)''')
     conn.commit()
     print('Created the game log table')
 
