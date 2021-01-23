@@ -41,4 +41,4 @@ Database:
 SQLite3
 
 Architecture:
-![![Screenshot](artchitecutre_appease.png)
+![Screenshot](artchitecutre_appease.png)
