@@ -23,21 +23,19 @@ Web Application:
 
 The web application is for parents and doctors to monitor their child’s health information. The dashboard also has visualizations that can help parents and doctors visualize the information and compare it over a period of time. 
 
-Web Application:
+Tech Stack:
 
+Web Application:\
 React
 Django
 
-iOS and watchOS Application:
-
+iOS and watchOS Application:\
 SwiftUI
 
-Data Pipeline:
-
+Data Pipeline:\
 Kafka Manager
 
-Database:
-
+Database:\
 SQLite3
 
 Architecture:
