@@ -25,7 +25,7 @@ The web application is for parents and doctors to monitor their child’s health
 
 # Tech Stack:
 
-![Screenshot](techstack.png)
+![Screenshot](techsatck.png)
 
 # Architecture:
 ![Screenshot](artchitecutre_appease.png)
