@@ -45,6 +45,7 @@ struct GameList: View {
     //    @State var reachable = "No"
     
     @ObservedObject var healthStore = HealthStore()
+    var musicManager = MusicManager()
     @EnvironmentObject var userStateManager: UserStateManager
     
     var fileMetaData: [String: Any] {
@@ -67,6 +68,20 @@ struct GameList: View {
                 destination: SensorDataView(healthStore: healthStore),
                 label: {Text("Sensor Data")}
             )
+            
+            Button(action: {
+                musicManager.setupAudioPlayer(fileName: "example.mp3")
+                musicManager.activateAudioSession()
+            }, label: {
+                Text("Play Music")
+            })
+            
+            Button(action: {
+                musicManager.stopPlayingAudio()
+            }, label: {
+                Text("Pause Music")
+            })
+            
             Button(action: {
                 UserDefaults.standard.set(false, forKey: "ISUSERLOGGEDIN")
                 userStateManager.userLoggedOut()

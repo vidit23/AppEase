@@ -10,6 +10,7 @@ import SwiftUI
 struct FindAMatchView: View {
     @State private var score = 0
     @ObservedObject var emojiGuessing = FindAMatch()
+    var fileHandler = FileIOManager(directory: URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true), fileName: "0CA88BB4-995C-4BCD-AB26-5AE5925CEDA2-359-0000001D623B8BE")
 
     var body: some View {
         NavigationView{
@@ -38,6 +39,26 @@ struct FindAMatchView: View {
             }
             .navigationBarBackButtonHidden(false)
         }
+        .onAppear(perform: {
+            let dateFormat = ISO8601DateFormatter()
+            var data: Dictionary<String, String> = [
+                "timeStamp": dateFormat.string(from: Date()),
+                "userToken": UserDefaults.standard.string(forKey: "USERTOKEN") ?? "",
+                "gameStatus": "Activated",
+                "gameName": "FindAMatch",
+            ]
+            self.fileHandler.writeToFile(dataToWrite: &data)
+        })
+        .onDisappear(perform: {
+            let dateFormat = ISO8601DateFormatter()
+            var data: Dictionary<String, String> = [
+                "timeStamp": dateFormat.string(from: Date()),
+                "userToken": UserDefaults.standard.string(forKey: "USERTOKEN") ?? "",
+                "gameStatus": "Deactivated",
+                "gameName": "FindAMatch",
+            ]
+            self.fileHandler.writeToFile(dataToWrite: &data)
+        })
     }
     
     func animalTapped(_ tag:String){

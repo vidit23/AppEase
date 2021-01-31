@@ -40,6 +40,14 @@
 	<string>The app would like to read simulated heart rate data from HealthKit</string>
 	<key>NSMotionUsageDescription</key>
 	<string>In order to count steps I need an access to your pedometer</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>self-care</string>
+	</array>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 	<key>WKRunsIndependentlyOfCompanionApp</key>

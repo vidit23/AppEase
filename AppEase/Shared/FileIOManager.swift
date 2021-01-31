@@ -81,7 +81,7 @@ class FileIOManager {
         if let theJSONData = try?  JSONSerialization.data(withJSONObject: dataToWrite),
           let theJSONText = String(data: theJSONData, encoding: String.Encoding.utf8) {
             do {
-                print(theJSONText)
+                print("Writing Data to file \(theJSONText) \(self.fullURL) \n\n")
                 try theJSONText.appendLineToURL(fileURL: self.fullURL)
             } catch {
                 // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding

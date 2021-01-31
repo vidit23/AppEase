@@ -63,13 +63,21 @@ class Dashboard extends Component {
             let step_data = [];
             let heart_data = [];
             for (var i = 0; i < health_data.length; i++) {
+                // console.log(health_data[i]);
                 let time = parseInt(health_data[i].TimeStamp);
-                let step = parseInt(health_data[i].stepCount);
+                // var time = new Date(health_data[i].timestamp);
+                // time = parseInt(time.getTime());
+                let step = parseInt(health_data[i].stepscount);
                 let heart = parseInt(health_data[i].heartrate);
                 
                 step_data.push([time, step]);
                 heart_data.push([time, heart]);
             }
+            // console.log(heart_data[0][0]);
+            // heart_data = heart_data.sort((a, b) => b[0] - a[0]);
+
+            // step_data = step_data.sort((a, b) => b[0] - a[0]);
+
             const series1 = new TimeSeries({
                 name: "Step Count",
                 columns: ["time", "value"],

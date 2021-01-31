@@ -9,6 +9,9 @@ import SwiftUI
 
 struct MemoryGameView: View {
     @ObservedObject var viewModel = EmojiMemoryGame()
+    
+    var fileHandler = FileIOManager(directory: URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true), fileName: "0CA88BB4-995C-4BCD-AB26-5AE5925CEDA2-359-0000001D623B8BE")
+    
     var body: some View {
         NavigationView{
             if viewModel.newGameStart == false {
@@ -33,6 +36,26 @@ struct MemoryGameView: View {
                 }
             }
         }
+        .onAppear(perform: {
+            let dateFormat = ISO8601DateFormatter()
+            var data: Dictionary<String, String> = [
+                "timeStamp": dateFormat.string(from: Date()),
+                "userToken": UserDefaults.standard.string(forKey: "USERTOKEN") ?? "",
+                "gameStatus": "Activated",
+                "gameName": "MemoryGame",
+            ]
+            self.fileHandler.writeToFile(dataToWrite: &data)
+        })
+        .onDisappear(perform: {
+            let dateFormat = ISO8601DateFormatter()
+            var data: Dictionary<String, String> = [
+                "timeStamp": dateFormat.string(from: Date()),
+                "userToken": UserDefaults.standard.string(forKey: "USERTOKEN") ?? "",
+                "gameStatus": "Deactivated",
+                "gameName": "MemoryGame",
+            ]
+            self.fileHandler.writeToFile(dataToWrite: &data)
+        })
     }
 }
 

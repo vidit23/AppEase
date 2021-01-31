@@ -17,7 +17,7 @@ class LoginManager: ObservableObject {
     @Published var authenticated = false
     
     func checkDetails(username: String, password: String) {
-        guard let url = URL(string: "http://10.0.0.55:8000/auth/") else { return }
+        guard let url = URL(string: "http://192.168.0.155:8000/auth/") else { return }
         let body: [String:String] = [
             "username": username,
             "password": password

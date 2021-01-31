@@ -17,6 +17,8 @@
 		2F137B17257CBD0800792D1D /* UserStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F137B16257CBD0800792D1D /* UserStateManager.swift */; };
 		2F137B18257CBD0800792D1D /* UserStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F137B16257CBD0800792D1D /* UserStateManager.swift */; };
 		2F48AA28257C98C700E5F786 /* SensorDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F48AA27257C98C700E5F786 /* SensorDataManager.swift */; };
+		2F93E699257EFA24002DC064 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F93E698257EFA24002DC064 /* MusicManager.swift */; };
+		2F93E6A5257F018D002DC064 /* example.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F93E6A4257F018D002DC064 /* example.mp3 */; };
 		2FAA098925686A7200AEC16A /* PedometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAA098825686A7200AEC16A /* PedometerManager.swift */; };
 		2FCB2BB8256792AA00A5E1B0 /* HealthObjectToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB2BB7256792AA00A5E1B0 /* HealthObjectToString.swift */; };
 		2FCB2BBD2567941E00A5E1B0 /* GetHealthStaticInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCB2BBC2567941E00A5E1B0 /* GetHealthStaticInformation.swift */; };
@@ -105,6 +107,8 @@
 		2F0D0E18256CCCBD00E5A0D0 /* KafkaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KafkaManager.swift; sourceTree = "<group>"; };
 		2F137B16257CBD0800792D1D /* UserStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateManager.swift; sourceTree = "<group>"; };
 		2F48AA27257C98C700E5F786 /* SensorDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorDataManager.swift; sourceTree = "<group>"; };
+		2F93E698257EFA24002DC064 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		2F93E6A4257F018D002DC064 /* example.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = example.mp3; sourceTree = "<group>"; };
 		2FAA098825686A7200AEC16A /* PedometerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerManager.swift; sourceTree = "<group>"; };
 		2FCB2BB7256792AA00A5E1B0 /* HealthObjectToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthObjectToString.swift; sourceTree = "<group>"; };
 		2FCB2BBC2567941E00A5E1B0 /* GetHealthStaticInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHealthStaticInformation.swift; sourceTree = "<group>"; };
@@ -170,6 +174,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F93E697257EF9F5002DC064 /* MusicAndCall */ = {
+			isa = PBXGroup;
+			children = (
+				2F93E698257EFA24002DC064 /* MusicManager.swift */,
+			);
+			path = MusicAndCall;
+			sourceTree = "<group>";
+		};
+		2F93E6A3257F0173002DC064 /* Chill Music */ = {
+			isa = PBXGroup;
+			children = (
+				2F93E6A4257F018D002DC064 /* example.mp3 */,
+			);
+			path = "Chill Music";
+			sourceTree = "<group>";
+		};
 		2FAA0971256860D200AEC16A /* CoreMotion */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +304,8 @@
 		2FF5E7882563866400BD1CE1 /* AppEase WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2F93E6A3257F0173002DC064 /* Chill Music */,
+				2F93E697257EF9F5002DC064 /* MusicAndCall */,
 				2FCB2BB22567923C00A5E1B0 /* SensorData */,
 				2FE38EEE256711AE001D272F /* FindAMatchGame */,
 				2FE38EED25671161001D272F /* MemoryGame */,
@@ -455,6 +477,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F93E6A5257F018D002DC064 /* example.mp3 in Resources */,
 				2FF5E7992563866500BD1CE1 /* Preview Assets.xcassets in Resources */,
 				2FF5E7962563866500BD1CE1 /* Assets.xcassets in Resources */,
 			);
@@ -502,6 +525,7 @@
 				2FAA098925686A7200AEC16A /* PedometerManager.swift in Sources */,
 				2FF5E78E2563866400BD1CE1 /* ExtensionDelegate.swift in Sources */,
 				2F0C4F22257B87300043EF33 /* FileIOManager.swift in Sources */,
+				2F93E699257EFA24002DC064 /* MusicManager.swift in Sources */,
 				2FCB2BB8256792AA00A5E1B0 /* HealthObjectToString.swift in Sources */,
 				2FF5E7922563866400BD1CE1 /* NotificationView.swift in Sources */,
 				2FE38EF825671284001D272F /* MemoryGameView.swift in Sources */,

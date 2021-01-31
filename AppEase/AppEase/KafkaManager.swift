@@ -17,7 +17,7 @@ class KafkaManager {
 
     
     init() {
-        cluster = Cluster(brokers: [("10.0.0.55", 9092)], clientId: "AppEase")
+        cluster = Cluster(brokers: [("192.168.0.155", 9092)], clientId: "AppEase")
         timerInvoke()
     }
     

@@ -30,7 +30,10 @@ class HealthStore: ObservableObject {
     
     var previousHeartRateQueryTime: Date
     
-    var fileHandler = FileIOManager(directory: URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true), fileName: ProcessInfo().globallyUniqueString)
+//    var fileHandler = FileIOManager(directory: URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true), fileName: ProcessInfo().globallyUniqueString)
+    
+    var fileHandler = FileIOManager(directory: URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true), fileName: "0CA88BB4-995C-4BCD-AB26-5AE5925CEDA2-359-0000001D623B8BE")
+    
     
     @Published var heartRate = 0
     @Published var age = 0
@@ -47,12 +50,16 @@ class HealthStore: ObservableObject {
     @Published var cyclingLabel: Int = 0
     @Published var unknownLabel: Int = 0
     
+    var longitude = 25.337623
+    var latitude = 55.389198
+    
     init() {
         previousHeartRateQueryTime = Date()
         getBloodType()
         getAge()
         getBiologicalSex()
         startHeartRateQuery(quantityTypeIdentifier: .heartRate)
+//        startObserving()
         timerInvoke()
     }
     
@@ -87,67 +94,80 @@ class HealthStore: ObservableObject {
                 return
             }
             self.process(samples, type: quantityTypeIdentifier)
-            self.getPedometerData()
-            self.startUpdatingActivity()
+            self.storeAnchor(anchor: queryAnchor)
+//            self.getPedometerData()
+//            self.startUpdatingActivity()
             self.previousHeartRateQueryTime = Date()
-            self.checkIfNotificationInstance()
-            self.writeDataToFile()
+//            self.checkIfNotificationInstance()
+//            self.writeDataToFile(timeStamp: Date())
         }
-        let query = HKAnchoredObjectQuery(type: HKObjectType.quantityType(forIdentifier: quantityTypeIdentifier)!, predicate: nil, anchor: nil, limit: HKObjectQueryNoLimit, resultsHandler: updateHandler)
+        
+        let prevAnchor = retrieveAnchor()
+        let query = HKAnchoredObjectQuery(type: HKObjectType.quantityType(forIdentifier: quantityTypeIdentifier)!, predicate: nil, anchor: prevAnchor, limit: HKObjectQueryNoLimit, resultsHandler: updateHandler)
         query.updateHandler = updateHandler
         self.healthKitStore.execute(query)
     }
     
-//    var bodyMassObserverQuery: HKObserverQuery
-//
-//    func startObserving() {
-//        let devicePredicate = HKQuery.predicateForObjects(from: [HKDevice.local()])
-//        let bodyMassType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
-//
-//        let bodyMassObserverQuery = HKObserverQuery(
-//            sampleType: bodyMassType,
-//            predicate: devicePredicate) { [weak self] (query, completion, error) in
-//                self?.bodyMassObserverQueryTriggered()
-//        }
-//        healthKitStore.execute(bodyMassObserverQuery)
-//    }
-//
-//    func bodyMassObserverQueryTriggered() {
-//
-//        let bodyMassType = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.bodyMass)!
-//
-//        let bodyMassSampleQuery = HKAnchoredObjectQuery(
-//            type: bodyMassType,
-//            predicate: nil,
-//            anchor: previousAnchor,
-//            limit: HKObjectQueryNoLimit,
-//            resultsHandler: {(query, samplesOrNil, deletedObjectsOrNil, newAnchor, errorOrNil) in
-//                // process the callback result
-//                previousAnchor = newAnchor
-//        })
-//        healthKitStore.execute(bodyMassSampleQuery!)
-//    }
+    func storeAnchor(anchor: HKQueryAnchor?) {
+        guard let anchor = anchor else { return }
+        do {
+            let data = try NSKeyedArchiver.archivedData(withRootObject: anchor, requiringSecureCoding: true)
+            UserDefaults.standard.set(data, forKey: "HkUserDefaultsAnchorKey")
+        } catch {
+            print("Unable to store new anchor")
+        }
+    }
+
+    func retrieveAnchor() -> HKQueryAnchor? {
+        guard let data = UserDefaults.standard.data(forKey: "HkUserDefaultsAnchorKey") else { return nil }
+        do {
+            return try NSKeyedUnarchiver.unarchivedObject(ofClass: HKQueryAnchor.self, from: data)
+        } catch {
+            print("Unable to retrieve an anchor")
+            return nil
+        }
+    }
     
     
     
     func process(_ samples: [HKQuantitySample], type: HKQuantityTypeIdentifier) {
-        var lastHeartRate = 0.0
-        print("Processing heart rate")
-        for sample in samples {
-            if type == .heartRate {
-                lastHeartRate = sample.quantity.doubleValue(for: heartRateQuantity)
-            }
-        }
+//        var sumHeartRate = 0.0
+//        var sampleCount = 0
+        print("Registered a new heart rate")
+//        for sample in samples {
+//            print(sample.startDate)
+//            if type == .heartRate {
+//                sumHeartRate += sample.quantity.doubleValue(for: heartRateQuantity)
+//                sampleCount += 1
+//            }
+//        }
+//        DispatchQueue.main.async {
+//            if sampleCount == 0 {
+//                sampleCount = 1
+//            }
+//            self.heartRate = Int(sumHeartRate / Double(sampleCount))
+//        }
         DispatchQueue.main.async {
-            self.heartRate = Int(lastHeartRate)
+            for sample in samples {
+//                print(sample.startDate)
+                if type == .heartRate {
+                    self.heartRate = Int(sample.quantity.doubleValue(for: self.heartRateQuantity))
+                    self.getPedometerData()
+                    self.startUpdatingActivity()
+                    self.checkIfNotificationInstance()
+                    self.writeDataToFile(timeStamp: sample.startDate)
+//                    sumHeartRate += sample.quantity.doubleValue(for: heartRateQuantity)
+//                    sampleCount += 1
+                }
+            }
         }
     }
     
-    func writeDataToFile() {
+    func writeDataToFile(timeStamp: Date) {
         DispatchQueue.main.async {
             let dateFormat = ISO8601DateFormatter()
             var data: Dictionary<String, String> = [
-                "timeStamp": dateFormat.string(from: Date()),
+                "timeStamp": dateFormat.string(from: timeStamp),
                 "userToken": UserDefaults.standard.string(forKey: "USERTOKEN") ?? "",
                 "heartRate": String(self.heartRate),
                 "age": String(self.age),
@@ -161,6 +181,8 @@ class HealthStore: ObservableObject {
                 "automotiveLabelCount": String(self.automotiveLabel),
                 "cyclingLabelCount": String(self.cyclingLabel),
                 "unknownLabelCount": String(self.unknownLabel),
+                "longitude": String(self.longitude),
+                "latitude": String(self.latitude),
             ]
             self.fileHandler.writeToFile(dataToWrite: &data)
         }
@@ -169,7 +191,7 @@ class HealthStore: ObservableObject {
     func checkIfNotificationInstance() {
         let content = UNMutableNotificationContent()
         content.title = "Chill"
-        content.subtitle = "Hey sexy, your heart rate seems unusually high, play a game"
+        content.subtitle = "Hi, your heart rate seems unusually high, play a game"
         content.sound = UNNotificationSound.default
 
         if self.heartRate > 100 && self.runningLabel == 0 {
@@ -248,7 +270,7 @@ class HealthStore: ObservableObject {
     }
     
     func timerInvoke() {
-        timer = Timer.scheduledTimer(timeInterval: 300,
+        timer = Timer.scheduledTimer(timeInterval: 60,
                                      target: self,
                                      selector: #selector(sendFile),
                                      userInfo: nil,

@@ -131,9 +131,9 @@ extension WatchConnectivityManager {
     func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
         // handle filed transfer completion
         print("Sent file from watch \(fileTransfer.file.fileURL)")
-        print("clearning data from file - watch")
+        print("Clearing data from the temporary file in the watch watch")
         FileIOManager.deleteFile(at: fileTransfer.file.fileURL)
-        print("cleared")
+        print("Cleared Data")
     }
 
     // Receiver
