@@ -25,18 +25,7 @@ The web application is for parents and doctors to monitor their child’s health
 
 # Tech Stack:
 
-Web Application:\
-React
-Django
-
-iOS and watchOS Application:\
-SwiftUI
-
-Data Pipeline:\
-Kafka Manager
-
-Database:\
-SQLite3
+![Screenshot](techstack.png)
 
 # Architecture:
 ![Screenshot](artchitecutre_appease.png)
