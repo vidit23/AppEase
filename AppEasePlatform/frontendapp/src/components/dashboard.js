@@ -13,6 +13,8 @@ import {
 
 // const user_data = require('../data/user_info.json');
 // const health_data = require('../data/health_data.json');
+const backendAddress = "192.168.0.155"
+
 
 class Dashboard extends Component {
     state = {
@@ -23,7 +25,7 @@ class Dashboard extends Component {
     componentDidMount() {
         const token = getToken();
         const name = getUser();
-        fetch(`http://192.168.0.155:8000/api/healthStatic/${token}/`)
+        fetch(`http://${backendAddress}:8000/api/healthStatic/${token}/`)
           .then(res => res.json())
           .then(
             (result) => {
@@ -39,7 +41,7 @@ class Dashboard extends Component {
                 console.log(error);
             }
         )
-        fetch(`http://192.168.0.155:8000/api/healthDynamic/${token}/`)
+        fetch(`http://${backendAddress}:8000/api/healthDynamic/${token}/`)
           .then(res => res.json())
           .then(
             (result) => {
